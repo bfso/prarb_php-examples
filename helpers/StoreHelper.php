@@ -29,16 +29,18 @@ class StoreHelper
         return $lines;
     }
 
+    public function inverseLines(){
+        $lines = $this->linesAsArray();
+        $lines = array_reverse($lines);
 
+        $this->clear();
 
-//    public function storeNewLine($value){
-//        file_put_contents("numbers.txt", $value.PHP_EOL, FILE_APPEND);
-//    }
-//
-//    public function linesAsArray(){
-//        $fileContent = file_get_contents("numbers.txt");
-//        $lines = explode("\n",$fileContent);
-//        return $lines;
-//    }
+        foreach ($lines as $line){
+            if(!is_numeric($line)){
+                continue;
+            }
+            $this->storeNewLine($line);
+        }
+    }
 
 }

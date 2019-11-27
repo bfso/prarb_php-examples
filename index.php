@@ -6,7 +6,7 @@
 <body>
     <?php
         $storeHelper = new StoreHelper();
-    $total = 0;
+        $total = 0;
 
         if(isset($_POST['number'])){
             $storeHelper->storeNewLine($_POST['number']);
@@ -15,7 +15,9 @@
         $lines = $storeHelper->linesAsArray();
         foreach ($lines as $line){
             echo $line."<br>";
-            $total = $total + $line;
+            if(is_numeric($line)){
+                $total = $total + $line;
+            }
         }
 
         echo "<strong>Total:".$total." </strong>";
