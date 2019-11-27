@@ -5,6 +5,12 @@ use PHPUnit\Framework\TestCase;
 include('helpers/CalcHelper.php');
 
 final class CalcTest extends TestCase{
+
+//    public function setUp()
+//    {
+//
+//    }
+
 //	public function test_func(){
 //		$this->assertTrue(true);
 //	}

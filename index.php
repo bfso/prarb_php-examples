@@ -5,9 +5,11 @@
 <html>
 <body>
     <?php
+        $storeHelper = new StoreHelper();
+
         if(isset($_POST['number'])){
-            file_put_contents ( "numbers.txt" ,  $_POST['number'],FILE_APPEND);
-            echo file_get_contents("numbers.txt");
+            $storeHelper->store($_POST['number']);
+            echo $storeHelper->read();
         }
     ?>
 
