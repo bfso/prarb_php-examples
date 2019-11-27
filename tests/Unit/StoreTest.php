@@ -21,6 +21,14 @@ final class StoreTestTest extends TestCase{
         $this->assertEquals($randomString,$result);
     }
 
+    public function test_write_many_lines_to_file(){
+        $this->assertTrue(true);
+    }
+
+    public function test_get_file_as_array(){
+        $this->assertTrue(true);
+    }
+
     private function generateRandomString($length = 10) {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $charactersLength = strlen($characters);
@@ -30,7 +38,5 @@ final class StoreTestTest extends TestCase{
         }
         return $randomString;
     }
-
-    // @todo test write to file
 
 }

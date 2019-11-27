@@ -17,4 +17,28 @@ class StoreHelper
         file_put_contents("numbers.txt", "");
     }
 
+    public function storeNewLine($value)
+    {
+        file_put_contents("numbers.txt", $value.PHP_EOL, FILE_APPEND);
+    }
+
+    public function linesAsArray()
+    {
+        $fileContent = file_get_contents("numbers.txt");
+        $lines = explode(PHP_EOL,$fileContent);
+        return $lines;
+    }
+
+
+
+//    public function storeNewLine($value){
+//        file_put_contents("numbers.txt", $value.PHP_EOL, FILE_APPEND);
+//    }
+//
+//    public function linesAsArray(){
+//        $fileContent = file_get_contents("numbers.txt");
+//        $lines = explode("\n",$fileContent);
+//        return $lines;
+//    }
+
 }
