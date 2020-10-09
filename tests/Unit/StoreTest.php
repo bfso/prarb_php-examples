@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
-include('helpers/StoreHelper.php');
+include('app/helpers/StoreHelper.php');
 
 final class StoreTestTest extends TestCase{
 //	public function test_func(){

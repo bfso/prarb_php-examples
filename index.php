@@ -1,5 +1,5 @@
 <?php
-    include('helpers/StoreHelper.php');
+    include('app/helpers/StoreHelper.php');
 ?>
 
 <html>
