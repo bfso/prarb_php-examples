@@ -32,6 +32,13 @@ class StoreTextIntoFile {
     }
 
     /**
+     * Deletes a file
+     */
+    public function delete() {
+        unlink($this->filename);
+    }
+
+    /**
      * @param $value
      * Writes a value to a file and then switches to the next line
      */

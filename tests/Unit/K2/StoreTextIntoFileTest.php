@@ -28,6 +28,9 @@ class StoreTextIntoFileTest extends TestCase{
         // The read method needs to return the content of the file.
         $result = $storeHelper->read();
         $this->assertEquals($randomString,$result);
+
+        // Remove File
+        $storeHelper->delete();
     }
 
     /**
@@ -47,6 +50,9 @@ class StoreTextIntoFileTest extends TestCase{
 
         // Check if the result is correct.
         $this->assertEquals($randomStrings,$result);
+
+        // Remove File
+        $storeHelper->delete();
     }
 
     /**
@@ -58,6 +64,9 @@ class StoreTextIntoFileTest extends TestCase{
                 $this->writeRandomLinesIntoAFile($storeHelper),
                 $storeHelper->readAsArray()
         );
+
+        // Remove File
+        $storeHelper->delete();
     }
 
     /**
@@ -83,6 +92,9 @@ class StoreTextIntoFileTest extends TestCase{
                 $expectedResult,
                 $storeHelper->readAsArray()
         );
+
+        // Remove File
+        $storeHelper->delete();
     }
 
     /**
