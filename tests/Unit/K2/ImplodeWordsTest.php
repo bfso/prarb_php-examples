@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
-include('app/K1/ImplodeWords.php');
+include('app/K2/ImplodeWords.php');
 
 use PHPUnit\Framework\TestCase;
-use App\K1\ImplodeWords;
+use App\K2\ImplodeWords;
 
 
 final class ImplodeWordsTest extends TestCase {

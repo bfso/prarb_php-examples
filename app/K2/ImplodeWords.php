@@ -1,6 +1,6 @@
 <?php
 
-namespace App\K1;
+namespace App\K2;
 
 class ImplodeWords {
     public static function implodeWithCommaAtTheEnd($words) {
@@ -25,5 +25,4 @@ class ImplodeWords {
     public static function implodeWithPhpFunction($words) {
         return implode(",", $words);
     }
-
 }

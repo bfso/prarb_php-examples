@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
-include('app/K1/SumOfAnXDimensionalArray.php');
+include('app/K2/SumOfAnXDimensionalArray.php');
 
 use PHPUnit\Framework\TestCase;
-use App\K1\SumOfAnXDimensionalArray;
+use App\K2\SumOfAnXDimensionalArray;
 
 
 final class SumOfAnXDimensionalArrayTest extends TestCase {

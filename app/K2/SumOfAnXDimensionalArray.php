@@ -1,5 +1,5 @@
 <?php
-namespace App\K1;
+namespace App\K2;
 
 class SumOfAnXDimensionalArray {
     public static function sum($array){

@@ -14,7 +14,5 @@ final class MonthsInAnArrayTest extends TestCase {
         $this->assertEquals("January", MonthsInAnArray::handle(1));
         $this->assertEquals("March", MonthsInAnArray::handle(3));
         $this->assertEquals("December", MonthsInAnArray::handle(12));
-        $this->assertEquals(MonthsInAnArray::ERROR_MESSAGE, MonthsInAnArray::handle('two'));
-        $this->assertEquals(MonthsInAnArray::ERROR_MESSAGE, MonthsInAnArray::handle(13));
     }
 }

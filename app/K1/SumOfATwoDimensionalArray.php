@@ -1,7 +1,7 @@
 <?php
 namespace App\K1;
 
-class SumOfAnTwoDimensionalArray {
+class SumOfATwoDimensionalArray {
     public static function sum($values){
         $total = 0;
         foreach ($values as $subValues){
