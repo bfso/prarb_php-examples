@@ -1,7 +1,18 @@
 <?php
 
-namespace App\K2;
+namespace App\K3;
 
+/**
+ * Class StoreTextIntoFile
+ *
+ * @package App\K3
+ *
+ *
+ *          The methods of this class are not static anymore
+ *          you can now access its properties with $this->
+ *          e.g. $this->filename
+ *
+ */
 class StoreTextIntoFile {
     /**
      * @var string
@@ -10,7 +21,7 @@ class StoreTextIntoFile {
 
     /**
      * @param $value
-     * Insert a value at the end of a file.
+     * Insert a value at the end of the file.
      */
     public function write($value) {
         file_put_contents($this->filename, $value, FILE_APPEND);
@@ -25,14 +36,14 @@ class StoreTextIntoFile {
     }
 
     /**
-     * Clears a file
+     * Empties the file
      */
     public function clear() {
         file_put_contents($this->filename, "");
     }
 
     /**
-     * Deletes a file
+     * Deletes the file
      */
     public function delete() {
         unlink($this->filename);

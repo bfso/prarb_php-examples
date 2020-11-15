@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
-include('app/K2/SumOfAnArrayWithExceptions.php');
+include('app/K3/SumOfAnArrayWithExceptions.php');
 include('app/Exceptions/NotANumberException.php');
 include('app/Exceptions/NotAnArrayException.php');
 
 use App\Exceptions\NotAnArrayException;
 use App\Exceptions\NotANumberException;
-use App\K2\SumOfAnArrayWithExceptions;
+use App\K3\SumOfAnArrayWithExceptions;
 use PHPUnit\Framework\TestCase;
 
 

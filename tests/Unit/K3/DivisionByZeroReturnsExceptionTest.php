@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
-include('app/K2/DivisionByZeroReturnsException.php');
+include('app/K3/DivisionByZeroReturnsException.php');
 include('app/Exceptions/NotAllowedException.php');
 
 use App\Exceptions\NotAllowedException;
 use PHPUnit\Framework\TestCase;
-use App\K2\DivisionByZeroReturnsException;
+use App\K3\DivisionByZeroReturnsException;
 
 
 final class DivisionByZeroReturnsExceptionTest extends TestCase {
