@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-require_once('app/K3/Vision.php');
+require_once('app/J3/Vision.php');
 
-use App\K3\Vision;
+use App\J3\Vision;
 use PHPUnit\Framework\TestCase;
 
 class VisionTest extends TestCase {
@@ -11,7 +11,8 @@ class VisionTest extends TestCase {
      * @test
      */
     public function has_vision() {
-        $vision = new Vision(1);
+        $vision = new Vision();
+        $visionRange = 2;
         $currentPosition = [2, 2];
 
         $maps = [
@@ -29,21 +30,19 @@ class VisionTest extends TestCase {
                         [false, true, true, true, false,],
                         [false, false, false, false, false,],
                 ],
-
-
         ];
 
         foreach ($maps as $map) {
             foreach ($map as $i => $row) {
                 foreach ($row as $j => $field) {
                     if ($field) {
-                        $this->assertTrue($vision->hasVision($currentPosition[0], $currentPosition[1], $i, $j));
+                        $this->assertTrue($vision::hasVision($currentPosition[0], $currentPosition[1], $i, $j, $visionRange));
                     } else {
-                        $this->assertFalse($vision->hasVision($currentPosition[0], $currentPosition[1], $i, $j));
+                        $this->assertFalse($vision::hasVision($currentPosition[0], $currentPosition[1], $i, $j, $visionRange));
                     }
                 }
             }
-            $vision->increase();
+            $visionRange++;
         }
     }
 }
