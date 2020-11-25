@@ -1,23 +1,28 @@
 <?php
 
+
 namespace App\J3;
 
-class Loot {
-    public function generateLoot($name, $map) {
+class Loot extends FieldContent
+{
+    protected $key = '';
+    protected $clickable = false;
 
+    public function setKey($key){
+        $this->key = $key;
     }
 
-    public function getAllLoot() {
-        $items = [];
-        $conn = new mysqli("localhost", "root", "", "test");
-        $sql = "SELECT * FROM items;";
-        $result = $conn->query($sql);
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                $items[$row["id"]] = $row;
-            }
-        }
-        $conn->close();
-        return $items;
+    public function getKey()
+    {
+       return $this->key;
+    }
+
+    public function isClickable()
+    {
+        return $this->clickable;
+    }
+
+    public function setClickable($clickable){
+        $this->clickable = $clickable;
     }
 }

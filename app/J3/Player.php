@@ -43,4 +43,9 @@ class Player extends FieldContent {
     public function setPositionY($positionY) {
         $this->positionY = $positionY;
     }
+
+    public function putItemInBag($loot)
+    {
+        Bag::putItemInBag($loot);
+    }
 }
