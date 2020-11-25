@@ -1,4 +1,5 @@
 <?php
+
 namespace App\J3;
 
 class Config {

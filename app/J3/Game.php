@@ -1,33 +1,37 @@
 <?php
+
 namespace App\J3;
-require_once ('Config.php');
-require_once ('Request.php');
-require_once ('FieldContent.php');
-require_once ('Vision.php');
-require_once ('FieldContentNoVision.php');
-require_once ('FieldContentVision.php');
-require_once ('Player.php');
-require_once ('SimpleMap.php');
-require_once ('FieldRenderer.php');
+require_once('Db.php');
+require_once('Config.php');
+require_once('Request.php');
+require_once('FieldContent.php');
+require_once('Vision.php');
+require_once('FieldContentNoVision.php');
+require_once('FieldContentVision.php');
+require_once('Player.php');
+require_once('SimpleMap.php');
+require_once('Map.php');
+require_once('LootManager.php');
+require_once('FieldRenderer.php');
 
 class Game {
     /**
      * @var int
      */
-    private $mapSize;
+    private int $mapSize;
     /**
-     * @var Map
+     * @var SimpleMap
      */
-    private $map;
+    private SimpleMap $map;
 
     public function __construct() {
         $this->mapSize = Config::get('map-size');
         $request = new Request();
         $player = new Player($request->x, $request->y);
-        $this->map = new Map($player, $this->mapSize);
+        $this->map = new SimpleMap($player, $this->mapSize);
     }
 
-    public function table(){
+    public function table() {
         echo "<table>";
         $this->rows();
         echo "</table>";

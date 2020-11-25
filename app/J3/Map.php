@@ -2,18 +2,15 @@
 
 namespace App\J3;
 
-class Map extends SimpleMap
-{
+class Map extends SimpleMap {
     protected $items = [];
 
-    public function __construct($player, $mapSize)
-    {
+    public function __construct($player, $mapSize) {
         parent::__construct($player, $mapSize);
         $this->items = LootManager::getAllLoot();
     }
 
-    public function getFieldContent($i, $j)
-    {
+    public function getFieldContent($i, $j) {
         // Search your loot array, when there is a loot on the
         // position i,j then assign it to the variable item
         $loot = $this->getLootOnField($i, $j);
@@ -39,8 +36,7 @@ class Map extends SimpleMap
         return new FieldContentNoVision($i, $j);
     }
 
-    public function getLootOnField($i, $j)
-    {
+    public function getLootOnField($i, $j) {
         foreach ($this->items as $item) {
             if ($item['x'] == $i && $item['y'] == $j) {
                 $loot = new Loot($i, $j);
@@ -52,16 +48,14 @@ class Map extends SimpleMap
         return false;
     }
 
-    private function pickUpItemAndPutItInTheBag($loot, $i, $j)
-    {
+    private function pickUpItemAndPutItInTheBag($loot, $i, $j) {
         if ($loot) {
             $this->removeItemFromMap($i, $j);
             $this->player->putItemInBag($loot);
         }
     }
 
-    public function removeItemFromMap($i, $j)
-    {
-        LootManager::removeItem($i,$j);
+    public function removeItemFromMap($i, $j) {
+        LootManager::removeItem($i, $j);
     }
 }

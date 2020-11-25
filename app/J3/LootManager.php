@@ -2,17 +2,14 @@
 
 namespace App\J3;
 
-class LootManager
-{
-    public function generateLoot($name, $map)
-    {
+class LootManager {
+    public function generateLoot(string $name, Map $map) {
 
     }
 
-    public static function getAllLoot()
-    {
+    public static function getAllLoot() : array {
         $items = [];
-        $db = new db();
+        $db = new Db();
         $loot = $db->query("SELECT * FROM items;")->all();
         foreach ($loot as $row) {
             $items[$row["id"]] = $row;
@@ -20,8 +17,8 @@ class LootManager
         return $items;
     }
 
-    public static function removeItem($i,$j){
-        $db = new db();
-        $db->query("DELETE FROM items WHERE x = ".$i." AND y = ".$j.";");
+    public static function removeItem($i, $j) {
+        $db = new Db();
+        $db->query("DELETE FROM items WHERE x = " . $i . " AND y = " . $j . ";");
     }
 }

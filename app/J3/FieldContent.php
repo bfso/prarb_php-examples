@@ -2,11 +2,10 @@
 
 namespace App\J3;
 
-abstract class FieldContent
-{
-    public $i;
-    public $j;
-    public function __construct($i,$j) {
+abstract class FieldContent {
+    public int $i;
+    public int $j;
+    public function __construct(int $i, int $j) {
         $this->i = $i;
         $this->j = $j;
     }

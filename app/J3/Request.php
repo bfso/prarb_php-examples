@@ -13,13 +13,17 @@ class Request {
 
     private function x() {
         if (isset($_GET['x'])) {
-            $this->x = $_GET['x'];
+            if ($_GET['x'] != "") {
+                $this->x = $_GET['x'];
+            }
         }
     }
 
     private function y() {
         if (isset($_GET['y'])) {
-            $this->y = $_GET['y'];
+            if ($_GET['y'] != "") {
+                $this->y = $_GET['y'];
+            }
         }
     }
 }
