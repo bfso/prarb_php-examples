@@ -15,10 +15,6 @@ class ExtractPartOfStringBasic {
         // Return the fifth element
         // ("a.b.c.d.e.f" → "e")
         // In case the is no fifth element; return a UndefinedOffsetException
-        $parts = explode(".", $title);
-        if (!isset($parts[4])) {
-            throw new UndefinedOffsetException();
-        }
-        return $parts[4];
+
     }
 }

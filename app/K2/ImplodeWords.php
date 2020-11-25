@@ -10,11 +10,7 @@ class ImplodeWords {
         //          - There should be a comma at the end
         //          - Every first letter of an word should be uppercase!
 
-        $result = "";
-        foreach ($words as $word) {
-            $result .= ucfirst($word) . ',';
-        }
-        return $result;
+
     }
 
     public static function implodeWithoutCommaAtTheEnd($words) {
@@ -32,6 +28,5 @@ class ImplodeWords {
     public static function implodeWithPhpFunction($words) {
         // Do the same as in the second function, but in one line
         // Use a native php function
-        return implode(",", $words);
     }
 }

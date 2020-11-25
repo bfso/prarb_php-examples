@@ -37,15 +37,7 @@ class Map extends SimpleMap {
     }
 
     public function getLootOnField($i, $j) {
-        foreach ($this->items as $item) {
-            if ($item['x'] == $i && $item['y'] == $j) {
-                $loot = new Loot($i, $j);
-                $loot->setKey($item['name']);
-                $loot->setClickable($this->player->hasVision($i, $j));
-                return $loot;
-            }
-        }
-        return false;
+
     }
 
     private function pickUpItemAndPutItInTheBag($loot, $i, $j) {
