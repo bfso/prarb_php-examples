@@ -2,6 +2,8 @@
 
 namespace App\J3;
 
+use mysqli;
+
 class Db {
     protected $connection;
     protected $query;

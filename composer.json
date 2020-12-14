@@ -1,6 +1,7 @@
 {
     "require": {
         "phpunit/phpunit": "^8.4",
-        "fzaninotto/faker": "^1.9"
+        "fzaninotto/faker": "^1.9",
+        "ext-mysqli": "*"
     }
 }
