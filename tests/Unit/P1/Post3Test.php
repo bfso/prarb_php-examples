@@ -34,4 +34,13 @@ final class Post3Test extends TestCase {
         $this->assertEquals($treeFive, Post3::handle(5));
         $this->assertEquals($treeSeven, Post3::handle(7));
     }
+
+    /**
+     * @test
+     */
+    public function getChar() {
+        $this->assertEquals("###",Post3::getChars(3,"#"));
+        $this->assertEquals("*",Post3::getChars(1,"*"));
+        $this->assertEquals("&&",Post3::getChars(2,"&"));
+    }
 }

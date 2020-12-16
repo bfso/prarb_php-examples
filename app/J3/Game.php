@@ -28,7 +28,7 @@ class Game {
         $this->mapSize = Config::get('map-size');
         $request = new Request();
         $player = new Player($request->x, $request->y);
-        $this->map = new SimpleMap($player, $this->mapSize);
+        $this->map = new Map($player, $this->mapSize);
     }
 
     public function table() {
