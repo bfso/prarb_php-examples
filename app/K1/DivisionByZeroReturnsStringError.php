@@ -8,9 +8,5 @@ class DivisionByZeroReturnsStringError {
         // When the $value2 is 0 we have a problem:
         //  A division through zero is not allowed!
         // In this case, return the string 'Not Allowed'
-        if ($value2 == 0) {
-            return 'Not Allowed';
-        }
-        return $value1 / $value2;
     }
 }

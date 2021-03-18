@@ -12,12 +12,5 @@ class Generate1x1 {
         //      [3,6,9]
         // ]
         // Hint: The arrays need to start on index 0 not 1!
-        $result = [];
-        for ($i = 1; $i <= $limit; $i++) {
-            for ($j = 1; $j <= $limit; $j++) {
-                $result[$i - 1][$j - 1] = $i * $j;
-            }
-        }
-        return $result;
     }
 }

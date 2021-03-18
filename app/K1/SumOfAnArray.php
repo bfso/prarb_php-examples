@@ -8,10 +8,5 @@ class SumOfAnArray {
         // Here is an example:
         // Given the Variable $values contains [1,4,2]
         // The result have to be 7
-        $total = 0;
-        foreach ($values as $value) {
-            $total += $value;
-        }
-        return $total;
     }
 }

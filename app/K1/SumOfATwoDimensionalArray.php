@@ -12,12 +12,5 @@ class SumOfATwoDimensionalArray {
         //      [5,9]
         // ]
         // Given that array, the return-value should be 1+4+5+9=19
-        $total = 0;
-        foreach ($values as $subValues) {
-            foreach ($subValues as $subValue) {
-                $total += $subValue;
-            }
-        }
-        return $total;
     }
 }

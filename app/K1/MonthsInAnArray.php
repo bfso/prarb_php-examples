@@ -17,7 +17,5 @@ class MonthsInAnArray {
                 'November',
                 'December',
         ];
-
-        return $months[$monthNumber-1];
     }
 }
