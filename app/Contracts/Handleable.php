@@ -2,5 +2,11 @@
 namespace App\Contracts;
 
 interface Handleable {
-    public static function handle();
+    public const HANDLED = 'handled';
+
+    /**
+     *
+     * @return string
+     */
+    public static function handle() : string;
 }

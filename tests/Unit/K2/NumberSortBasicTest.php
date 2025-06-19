@@ -16,15 +16,11 @@ final class NumberSortBasicTest extends TestCase {
         $numbers = [7,3,4,3,2];
         $this->assertEquals([2,3,3,4,7],NumberSortBasic::sort($numbers));
 
-        $numbers = [rand(35,100),rand(10,1000),rand(15,166)];
+        $numbers = [random_int(35,100),random_int(10,1000),random_int(15,166)];
         $results = NumberSortBasic::sort($numbers);
         $temp = 0;
         foreach ($results as $number){
-            if($number >= $temp){
-                $this->assertTrue(true);
-            }else{
-                $this->assertTrue(false);
-            }
+            $this->assertGreaterThanOrEqual($temp, $number);
             $temp = $number;
         }
     }

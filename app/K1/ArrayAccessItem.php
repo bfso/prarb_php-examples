@@ -17,7 +17,7 @@ class ArrayAccessItem {
         // last item of a one-dimensional array.
     }
 
-    public static function getItemOnPosition(array $items, string $index): mixed{
+    public static function getItemOnPosition(array $items, int $index): mixed{
         // Return the correct item
     }
 
