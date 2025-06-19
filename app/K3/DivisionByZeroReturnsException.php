@@ -5,13 +5,13 @@ use App\Exceptions\NotAllowedException;
 
 class DivisionByZeroReturnsException {
     /**
-     * @param $value1
-     * @param $value2
-     * @return float|int
+     * @param float $value1
+     * @param float $value2
+     * @return float
      * @throws NotAllowedException
      */
-    public static function divide($value1, $value2) {
-        // Return a NotAllowedException when $value 2 is 0
+    public static function divide(float $value1, float $value2) : float {
+        // Throw a NotAllowedException when $value 2 is 0
         // Otherwise divide
 
     }

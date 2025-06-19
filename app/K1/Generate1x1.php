@@ -3,8 +3,8 @@
 namespace App\K1;
 
 class Generate1x1 {
-    public static function handle($limit) {
-        // Here you need to generate an array which contains an 1x1 from 1 to $limit
+    public static function handle(int $limit) : array {
+        // Here you need to generate an array which contains a 1x1 from 1 to $limit
         // Here is an example (Given $limit is 3):
         // $result = [
         //      [1,2,3],

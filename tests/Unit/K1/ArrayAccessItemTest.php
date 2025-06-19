@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 include('app/K1/ArrayAccessItem.php');
 
@@ -8,7 +9,7 @@ use App\K1\ArrayAccessItem;
 
 final class ArrayAccessItemTest extends TestCase {
 
-    protected $numbers = [
+    protected array $numbers = [
             [1,2],
             [1,[2,3]],
             [3,1]

@@ -3,7 +3,7 @@
 namespace App\K2;
 
 class FilterArrayItems {
-    public static function handle($fruitsNames) {
+    public static function handle(array $fruitsNames) : array {
         // $values is containing some fruit-names
         // - Create a new array called $filteredValues
         // - The $filteredValues have to contain only some values of the original array
@@ -13,14 +13,5 @@ class FilterArrayItems {
         // $fruitNames = ["Apple", "Kiwi", "Bananana", "Banana"]
         // Then we expect the following:
         // $filteredValues containing ["Banana", "Banana"]
-        $filteredValues = [];
-        foreach ($fruitsNames as $fruitName) {
-            if ($fruitName == "Bananana") {
-                $filteredValues[] = "Banana";
-            } else if ($fruitName[0] == "B") {
-                $filteredValues[] = $fruitName;
-            }
-        }
-        return $filteredValues;
     }
 }

@@ -9,7 +9,7 @@ class ExtractPartOfStringAdvanced {
      * @return mixed
      * @throws UndefinedOffsetException
      */
-    public static function handle($title) {
+    public static function handle(string $title) : string {
         // You need to extract some information out of a string
         // Here are the rules with the schema: ("Input string" → "Output string")
         // BE1 needs to be converted to BERN ("XO001.ARB1.BE1.HS20/21" → "BERN")

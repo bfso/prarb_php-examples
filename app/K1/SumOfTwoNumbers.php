@@ -2,7 +2,7 @@
 namespace App\K1;
 
 class SumOfTwoNumbers {
-    public static function sum($value1, $value2){
+    public static function sum(float $value1, float $value2) : float{
         // Return the sum of two values
     }
 }

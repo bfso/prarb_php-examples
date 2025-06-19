@@ -10,7 +10,7 @@ class ExtractPartOfStringBasic {
      * @return mixed
      * @throws UndefinedOffsetException
      */
-    public static function handle($title) {
+    public static function handle(string $title) : string {
         // Separate a string by the delimiter "."
         // Return the fifth element
         // ("a.b.c.d.e.f" → "e")

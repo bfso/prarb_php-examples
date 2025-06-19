@@ -1,9 +1,10 @@
 <?php
 declare(strict_types=1);
 
-require_once('app/K3/StoreTextIntoFile.php');
+require_once('app/Helpers/StoreTextIntoFile.php');
 require_once('app/K3/StoreArrayIntoFile.php');
-use App\K3\StoreTextIntoFile;
+
+use App\Helpers\StoreTextIntoFile;
 use App\K3\StoreArrayIntoFile;
 use PHPUnit\Framework\TestCase;
 

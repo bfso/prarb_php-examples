@@ -2,7 +2,11 @@
 namespace App\K1;
 
 class MonthsInAnArray {
-    public static function handle($monthNumber) {
+    public static function handle(int $monthNumber) : string {
+
+        // Return the correct moth based on the month number
+        // e.g. when $monthNumber is 2 return 'February'
+
         $months = [
                 'January',
                 'February',

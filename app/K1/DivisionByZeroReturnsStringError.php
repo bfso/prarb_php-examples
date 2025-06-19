@@ -2,7 +2,7 @@
 namespace App\K1;
 
 class DivisionByZeroReturnsStringError {
-    public static function divide($value1, $value2) {
+    public static function divide(float $value1, float $value2) : string|float {
         // In this function you have to divide the $value1 through the $value2
         // So for so simple;
         // When the $value2 is 0 we have a problem:
